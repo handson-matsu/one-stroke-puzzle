@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>ひとふで | One Stroke Puzzle</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header><a class="brand" href="./">ひとふで<span>ONE STROKE PUZZLE</span></a><span class="edition">5 STAGES · 小さな頭の体操</span></header>
+    <section class="intro"><p class="eyebrow">CONNECT. THINK. COMPLETE.</p><h1>ひとつの線で、<br>ぜんぶをつなごう。</h1><p>好きな点から、隣の点へ。<br class="mobile-break">すべての線を一度ずつ通ればクリア。</p></section>
+    <section class="game" aria-label="一筆書きパズル">
+      <div class="game-heading"><div><p class="eyebrow" id="stage-number"></p><h2 id="stage-name"></h2></div><div class="counter"><strong id="used-count">0</strong><span id="total-count"></span><small>通った線</small></div></div>
+      <div class="progress" role="progressbar" aria-label="通った線" aria-valuemin="0" aria-valuenow="0"><div id="progress-fill"></div></div>
+      <div class="board-wrap"><svg id="board" viewBox="0 0 400 360" aria-label="頂点を選んで進むパズル盤"></svg></div>
+      <div class="legend"><span><i class="unused-key"></i>まだ通っていない線</span><span><i class="used-key"></i>通った線</span><span><i class="current-key"></i>現在地</span></div>
+      <div id="message" role="status" aria-live="polite"></div>
+      <div class="actions"><button id="reset" class="secondary" type="button">↺ やり直す</button><button id="next" class="primary" type="button" disabled>次のステージ →</button></div>
+    </section>
+    <section class="instructions" aria-label="遊び方"><div><span>01</span><p><strong>最初の点を選ぶ</strong>どの点から始めるかも、パズルのうち。</p></div><div><span>02</span><p><strong>隣の点へ進む</strong>クリック・タップ、またはなぞって移動。</p></div><div><span>03</span><p><strong>すべての線を通る</strong>同じ線は一度だけ。迷ったらやり直そう。</p></div></section>
+    <footer>ひと息ついて、ひとふで。<span>MADE FOR A LITTLE MOMENT OF FOCUS</span></footer>
+  </main>
+</body>
+</html>
